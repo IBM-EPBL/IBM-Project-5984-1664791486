@@ -7,6 +7,7 @@ acts as a legitimate for obtaining sensitive information such as passwords, acco
 websites and notifying users to detect phishing websites. Machine learning algorithms have been one of the most effective techniques for detecting phishing websites.
 
 
+Technical Architecture:
 
 
 ![image](https://user-images.githubusercontent.com/110331335/193748854-91830726-2d47-4ea8-b804-0b3e69cab2d4.png)
