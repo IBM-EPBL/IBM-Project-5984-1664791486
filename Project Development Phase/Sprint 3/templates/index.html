@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phisher</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body class="bg-black muli">
+    <nav class="w-100pc flex flex-column md-flex-row md-px-10 py-5 bg-black">
+        <div class="flex justify-between">
+          
+            <a data-toggle="toggle-nav" data-target="#nav-items" href="#"
+                class="flex items-center ml-auto md-hidden indigo-lighter opacity-50 hover-opacity-100 ease-300 p-1 m-3">
+                <i data-feather="menu"></i>
+            </a>
+        </div>
+        
+    </nav>
+
+    <!-- hero section -->
+    <section id="home" class="min-h-100vh flex justify-start items-center">
+            <div>
+                <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Check for malicious Status</h1>
+
+                <div class="br-8 mt-10 inline-flex">
+                    <form action="/" method ="post">
+                    <input type="text"
+                        class="input-lg half bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 min-w-25vw br-r-0"
+                        class="form__input" name ='url' id="url"
+                        placeholder="Enter URL" required="" />
+                    <button
+                        class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fw-300 fs-s3 mr-0 br-l-0" role="button">Detect</button>
+                    </form>
+                </div>
+                <div class="white opacity-20 fs-s3 mt-3">eg:(https://google.com)</span>
+            </div>
+            <div class="col-md" id="form2">
+        
+                <br>
+                <h6 class = "right "><a href= {{ url }} target="_blank">{{ url }}</a></h6>
+                   
+                <br>
+                <h3 id="prediction"></h3>
+                <button class="button2" id="button2" role="button" onclick="window.open('{{url}}')" target="_blank" >Still want to Continue</button>
+                <button class="button1" id="button1" role="button"  onclick="window.open('{{url}}')" target="_blank">Continue</button>
+            </div> 
+        </div>
+    </section>
+
+    <script>
+        
+        let x = '{{xx}}';
+        let num = x*100;
+        if (0<=x && x<0.50){
+            num = 100-num;
+        }
+        let txtx = num.toString();
+        if(x<=1 && x>=0.50){
+            var label = "Website is "+txtx +"% safe to use...";
+            document.getElementById("prediction").innerHTML = label;
+            document.getElementById("button1").style.display="block";
+        }
+        else if (0<=x && x<0.50){
+            var label = "Website is "+txtx +"% unsafe to use..."
+            document.getElementById("prediction").innerHTML = label ;
+            document.getElementById("button2").style.display="block";
+        }
+    
+</script>
+
+    
+
+   
+    <a class="fixed top-50pc right-0 p-3 bg-indigo white hover-scale-up-1 ease-300 no-underline" href="https://gum.co/tifJM" target="_blank" >
+        <i class="w-4" data-feather="download"></i>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
